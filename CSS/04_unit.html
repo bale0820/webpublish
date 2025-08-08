@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit</title>
+    <style>
+        .pixel {
+            /* font-size: 2em; 폰트사이즈 픽셀(기본값) * 1.2 */
+            font-size: 1.2rem; /* 폰트사이즈 픽셀(기본값) * 1.2*/
+            width: 1000px; /*절대 사이즈  */
+            background-color: aquamarine;
+            /* overflow: hidden; */
+        }
+         .percent {
+            /*브라우저 크기만큼 줄어들거나 커진다 */
+            /*상대 사이즈*/
+            width: 50%; /*화면 가로 픽셀 다 채우겠다 기본으로 조금에 여백이있다 */
+            background-color: tomato;
+            
+        }
+        .h5-a {
+            width: 100%;
+            background-color: yellow;
+        }
+         .h5-b {
+            width: 200px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS 단위</h1>
+    <h2>Pixel(픽셀)</h2>
+    <div class="pixel">
+        <h5 class="h5-a">CSS - Pixel</h5>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>
+        Obcaecati sint dignissimos dolorum nobis culpa. <br>
+        Unde nobis quasi assumenda, dignissimos voluptas n <br>
+        umquam magnam provident, inventore sit beatae <br>
+        delectus labore, amet fugit!<br>
+    </div>
+    <hr>
+    <h2>Percent(퍼센트 : %)</h2>
+    <div class="percent">
+        <h5 class="h5-b">CSS - Pixel</h5>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>
+        Obcaecati sint dignissimos dolorum nobis culpa. <br>
+        Unde nobis quasi assumenda, dignissimos voluptas n <br>
+        umquam magnam provident, inventore sit beatae <br>
+        delectus labore, amet fugit!<br>
+    </div>
+</body>
+</html>

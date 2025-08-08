@@ -1,3 +1,5 @@
+## !! 크로스 브라우징(cross Browsing) - 작성한 UI(HTML) 페이지를 모든 브라우저에서 동일한 모습으로 출력
+
 ## 1. HTML(HyperText Markup language)
 - 팀 버너스 개발, W3C에서 HTML 버전 등 관리
 - 태그로 불리우며, 시작태그<>, 종료태그</>로 구성
@@ -91,3 +93,4 @@
 - fontawesome 여기 폰트사이트
 - input, button, radio, checkbox...
 - 사용자가 입력한 데이터를 백엔드로 전송하는 방법을 반드시 숙지!!!!
+
