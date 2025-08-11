@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        /*
+        margin과 padding은 Top,Right,Bottom,Left 순서의 시계방향으로 값을 정의
+        margin : 10px 5px 10px 5px
+        margin 10px 5px
+         */
+
+        h3  {
+            border: 1px solid gray;
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+            /* background-color: aqua; */
+        }
+        .padding h3 {
+            margin: 20px 10px;
+        }
+        .padding, .margin {width: 30%;}
+        .padding {
+            border: 1px solid blue;
+            /* t:30px r:100px b: 50px l:100px*/
+            /* margin-top: 30px;
+            margin-right: 100px;
+            margin-bottom: 50px;
+            margin-left: 100px; */
+            margin : 30px 100px 50px 100px;0
+        }
+        .margin {
+            /* margin-top: 20px; */
+            margin-left: 50px;
+            border: 1px solid red;
+            padding-left: 50px;
+        }
+
+        .inline {
+            width: 30%;
+            border: 5px solid green;
+            /* padding: 20px 10px ; */
+        }
+
+        /* 인라인은 여백이나 이런게 적용안됨 넓이나 이런것도 */
+        .inline span {
+            border: 2px solid tomato;
+            padding: 20px; /*inline에서 적용 가능! */
+            /* margin: 20px; inline에서는 left만 적용 가능! display: inline-block; 수정필요!! */
+            display: inline-block;
+            /* padding: 200px; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Box Model Style : content, border, padding, margin</h1>
+    <div class="inline">
+        <span>Span Test!!</span>
+    </div>
+    <div class="padding">
+        <h3>Padding</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. La bore iste,
+        soluta commodi porro cupiditate reiciendis dolores quae possimus enim
+        dicta voluptatibus laboriosam accusantium eligendi pariatur odit
+        illum eum iusto ratione!
+    </div>
+    <div class="margin">
+        <h3>Margin</h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. La bore iste,
+        soluta commodi porro cupiditate reiciendis dolores quae possimus enim
+        dicta voluptatibus laboriosam accusantium eligendi pariatur odit
+        illum eum iusto ratione!
+    </div>
+</body>
+
+</html>

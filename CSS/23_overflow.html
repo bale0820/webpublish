@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+</head>
+<style>
+    html {
+        height: 100%;
+    }
+    .d1, .p1 {
+        border: 1px solid red;
+    }
+    .d1 {
+        width: 50%;
+        /* 높이는 퍼센티지가 없다 자식의 바로위부모가 꼭 높이설정이 되어있어야한다*/
+        height: 300px; 
+        background-color: aquamarine;
+        overflow: auto;
+    }
+    .p1 {
+        width: 120%;
+        
+        background-color: yellow;
+    }
+</style>
+<body>
+    <h1>Overflow</h1>
+    <div class="d1">
+        <p class="p1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, fuga! Reiciendis consequuntur libero saepe illum dolor incidunt nulla sit temporibus? Reiciendis tenetur officiis excepturi labore dolorem aperiam molestiae praesentium. Cupiditate. 
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cupiditate ea obcaecati, doloremque laborum porro unde dolore sequi iste. Alias, sapiente architecto! Eos reiciendis amet repellat itaque adipisci voluptates illo?
+        </p>
+        <p class="p1"> 
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cupiditate ea obcaecati, doloremque laborum porro unde dolore sequi iste. Alias, sapiente architecto! Eos reiciendis amet repellat itaque adipisci voluptates illo?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quidem ad ipsum odit alias reprehenderit aut labore mollitia accusantium voluptatibus dolorum, eaque perspiciatis consequatur? Odio corrupti excepturi consequatur ipsa aperiam?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, numquam suscipit cupiditate facere placeat, temporibus repudiandae aliquid officia qui maxime molestiae, consectetur impedit quia pariatur. Vero, quasi! Odit, eveniet aliquam.
+        </p>
+    </div>
+</body>
+</html>

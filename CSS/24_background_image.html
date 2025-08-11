@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-image</title>
+    <style>
+        body {
+            background-image: url("https://www.lottecinema.co.kr/NLCHS/Content/images/common/logo.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: 100% 100%;
+            ;
+            /* 배경이라서 드래그안됨 */
+        }
+        img {
+            width: 150px;
+            border-radius: 30px;
+        }
+        /* **text-align: center;**는 블록 레벨 요소에서 인라인 또는 인라인 블록 요소(예: img, span, a 등)들을 가로로 중앙 정렬하는데 사용됩니다. */
+        div {
+            text-align: center;
+            width: 40%;
+            height: 350px;
+            border: 1px solid red;
+        }
+        .img1 {
+            background-color: aquamarine;
+            opacity: .5;
+        }
+        .img2 {
+            background-image: url("../HTML/images/img5.jpg");
+        }
+    </style>
+</head>
+<body>
+    <h1>Background-image Style</h1>
+    <div class="img1">
+        <h3>Image #1</h3>
+        <img src="../HTML/images/img1.jpg" alt="dog image#1">
+    </div>
+    <div class="img2">
+        <h3>Image #2</h3>
+        <img src="../HTML/images/img2.jpg" alt="dog image#1">
+    </div>
+</body>
+</html>
