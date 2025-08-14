@@ -1,105 +1,317 @@
 :root {
-    --color-white: #ffffff;
-    --color-black: #050a13;
-    --color-accent: #03e8f9;
-    --color-orange: #fd6413;
-    --color-gray: #1b1e26;
-    /* container size */
-    --max-size-width: 1200px;
+    --aqua-color: #00ffff;
+    --black-color : #000000;
+    --white-color : #ffffff;
+    --orange-color : #ffa500;
+    --gray-color :#414040;
+    --max-width : 1200px;
+    --font-header-size : 2.5rem;
 }
 
-
-
-
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
-}
+ }
 
 
-html, body {
+ html, body {
     height: 100%;
-}
+ }
 
+ li {
+  
+   list-style: none;
+ }
 
-.container {
+ .container {
     height: 100vh;
     height: 100dvh;
     display: flex;
     flex-direction: column;
-}
-
-
-/*
- header
-*/
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* flex : 0 0 10vh; */
-    /* min-height: 500px; */
-    background-color: var(--color-black);
-    padding: 20px;
-}
-
-li {
-    list-style-type: none;
-    padding: 20px;
-}
-
-li:hover {
-    background-color: #03e8f9;
-    border-radius: 5px;
-    /* padding: 0.5rem; */
-    
-}
-
-a {
-    text-decoration: none;
-}
-ul {
-    display: flex;
-    gap: 30px;
-    margin-right: 10px;
-    align-items: center;
-}
-.nav-image {
-    width: 30px;
-    height: 30px;
-}
-main {
-    margin: auto;
-    max-width: var(--max-size-width)
-}
-
-/* .header-menu {
-    display: flex;
-
-} */
-.header-logo {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    /* margin-left: 20px; */
-
-}
-
-
-
-/*
-home
- */
-.home {
-    width: var(--max-size-width);
-    background-color: var(--color-black);
-}
- .home-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 100%;
-    border: 1px solid var(--color-accent);
+    max-width: var(--max-width);
+    margin: 0 auto;
  }
+
+.header {
+   background-color: var(--black-color);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0.5rem 0;
+}
+.header-img{
+   width: 50px;
+   height: 50px;
+
+}
+.header-nav-ul {
+   display: flex;
+   gap: 2rem;
+   margin-right: 2rem;
+}
+.header-nav-li {
+   list-style-type: none;
+}
+
+.header-nav-li-a {
+   color: var(--white-color);
+   text-decoration: none;
+
+}
+
+/* 메인 첫번째 */
+.main-first {
+   background-color: var(--black-color);
+   color: var(--white-color);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 2rem 0;
+}
+
+.main-first-img {
+   width: 200px;
+   height: 200px;
+}
+
+.main-first-h1 {
+   font-size: var(--font-header-size);
+}
+
+.main-first-a {
+   display: inline-block;
+   background-color: #00ffff;
+   border-radius: 5px;
+   padding: 0.5rem 1rem;
+   margin-top: 1rem;
+   margin-bottom: 5rem;
+}
+
+
+/* 메인 두번째 */
+.main-second {
+  text-align: center;
+}
+.main-second-h1 {
+   font-size: 3rem;
+}
+
+.main-second-ul {
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   gap: 2rem;
+   margin: 3rem;
+   margin-top: 2rem ;
+
+}
+
+.main-second-div {
+   background-color: var(--black-color);
+   color: var(--white-color);
+   border-radius: 2rem;
+   padding: 2rem 1rem;
+
+}
+.main-second-span {
+   font-size: 6rem;
+   color: #00ffff;
+}
+
+.main-second-div2 {
+   display: flex;
+   text-align: start;
+   gap: 1rem;
+   margin: 1rem;
+   align-items: center;
+}
+
+.main-second-img {
+   width: 40px;
+   height: 20px;
+}
+
+/* 메인 세번째*/
+
+.main-third {
+   text-align: center;
+   background-color: var(--gray-color);
+   color: var(--white-color);
+   padding: 3rem;
+}
+
+.main-third-div {
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 2rem;
+}
+
+.bar {
+   background-color: var(--aqua-color);
+   height: 3px;
+}
+.bar-bg {
+   background-color: var(--gray-color);
+}
+
+.main-third-div2 {
+   display: flex;
+   justify-content: space-between;
+}
+
+.main-third-article {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   grid-row: span 2;
+   background-color: var(--black-color);
+   padding: 3rem;
+}
+.main-third-article2 {
+  background-color:  var(--black-color);
+}
+.main-third-article3 {
+   background-color: var(--orange-color);
+}
+
+.main-third-p {
+   margin-bottom: 2rem;
+}
+
+/* 메인 네번째*/
+.main-fourth {
+   text-align: center;
+}
+
+.main-fourth {
+   background-color: var(--black-color);
+   color: var(--white-color);
+}
+
+.main-fourth-ul {
+   display: flex;
+  justify-content: center;
+}
+
+.main-fourth-ul1 {
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   grid-template-rows: repeat(2,1fr);
+   padding: 0 2rem;
+}
+
+
+.main-fourth-li {
+   position: relative;
+   border: 3px solid var(--aqua-color);
+   margin: 0.5rem 0.5rem;
+   padding: 1rem 2rem;
+   
+   border-radius: 0.5rem;
+}
+.category-count {
+   width: 2rem;
+   height: 2rem;
+   background-color: var(--orange-color);
+   border-radius: 100%;
+   position: absolute;
+   top: -1.3rem;
+   right: 0.2rem;
+   opacity: 0;
+   transition: all 1s 0s ease;
+}
+
+.main-fourth-li:hover .category-count {
+   opacity: 1;
+   top: 0;
+}
+
+.main-fourth-li1 {
+   position: relative;
+   overflow: hidden;
+   margin: 0.5rem;
+}
+
+
+.main-fourth-img {
+  width: 100%;
+}
+
+.main-fourth-div {
+   position: absolute;
+   top: 0;
+   left: 0;
+   color: var(--white-color);
+   background-color: var(--gray-color);
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   opacity: 0;
+}
+
+
+.main-fourth-div:hover {
+   opacity: 0.5;
+}
+
+.main-fifth {
+   text-align: center;
+}
+
+
+/* 메인 마지막*/
+.main-fifth-ul {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 3rem;
+}
+
+.main-fifth-li {
+   display: flex;
+   align-items: center;
+   gap: 3rem;
+   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.38);
+}
+
+.main-fifth-li:nth-child(even) .main-fifth-img {
+
+   order: 1;
+}
+
+.main-fifth-img {
+   width: 150px;
+   height: 150px;
+   border-radius: 100%;
+}
+
+.footer {
+   text-align: center;
+   background-color: var(--black-color);
+   color: var(--white-color);
+}
+
+.footer-p {
+   font-size: 2rem;
+}
+
+.footer-span:hover {
+   color: var(--aqua-color);
+}
+
+
+
+
+@media screen and (max-width: 768px ) {
+      .main-second-ul {
+         grid-template-columns: repeat(1,1fr);
+      }
+      .main-fourth-ul1 {
+         grid-template-columns: repeat(1,1fr);
+      }
+}

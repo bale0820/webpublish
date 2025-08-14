@@ -1,39 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style1.css">
 </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="css/style1.css">
+
 <body>
     <div class="container">
-        <header id="header">
-            <div class="header-logo">
-                <img src="images/favicon.ico" alt="이미지" class="nav-image">
-                <h1>Judy</h1>
-            </div>
-            <nav>
-                <ul class="header-menu">
-                    <li><a href="#header" target="_blank" rel="noopener noreferrer">Home</a></li>
-                    <li><a href="#main" target="_blank" rel="noopener noreferrer">About</a></li>
-                    <li><a href="#home" target="_blank" rel="noopener noreferrer">Skill</a></li>
-                    <li><a href="http://" target="_blank" rel="noopener noreferrer">My Work</a></li>
-                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Testimonial</a></li>
-                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Contact</a></li>
+        <header class="header">
+            <img src="images/favicon.ico" alt="프로필 이미지" class="header-img">
+            <nav class="header-nav">
+                <ul class="header-nav-ul">
+                    <li class="header-nav-li"><a href="#home" class="header-nav-li-a">Home</a></li>
+                    <li class="header-nav-li"><a href="#about" class="header-nav-li-a">About</a></li>
+                    <li class="header-nav-li"><a href="#skill" class="header-nav-li-a">Skill</a></li>
+                    <li class="header-nav-li"><a href="myWork" class="header-nav-li-a">My Work</a></li>
+                    <li class="header-nav-li"><a href="#testimonial" class="header-nav-li-a">Testimonial</a></li>
+                    <li class="header-nav-li"><a href="#contact" class="header-nav-li-a">Contact</a></li>
                 </ul>
             </nav>
         </header>
-        <main id="main" >
-            <section class="home">
-                <img src="images/favicon.ico" alt="이미지" class="home-img">
-                <h2>Hello</h2>
-                <h2>I'm Junior Developer,Judy</h2>
-            </section>
-        </main>
-        <footer>
+
+        <!-- 메인 첫번째 -->
+        <section id="home" class="main-first">
+            <img src="images/favicon.ico" alt="메인 첫번째 이미지" class="main-first-img">
+            <h1 class="main-first-h1">Hello</h1>
+            <h1 class="main-first-h1">I'm Junior Developer, Judy</h1>
+            <p class="main-first-p">A software engineer currently residing in Seoul, South Korea</p>
+            <a href="#" class="main-first-a">contact me</a>
+
+        </section>
+
+
+        <!-- 메인 두번째 -->
+        <section id="about" class="main-second">
+            <h1 class="main-second-h1">About me</h1>
+            <p class="main-second-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, <br>
+                beatae enim quod possimus numquam officiis! Culpa, fugit officiis? <br>
+                Accusantium voluptates tempora quos nulla rem, facere sed itaque <br>
+                officiis doloribus ipsa!</p>
+            <ul class="main-second-ul">
+                <li class="main-second-li">
+                    <div class="main-second-div">
+                        <span class="main-second-span"><i class="fa-brands fa-html5"></i></span>
+                        <p class="main-second-p2">Front-end</p>
+                        <p class="main-second-p2">HTML, CSS, JavaScript, TypeScript, React,</p>
+                        <p class="main-second-p2">WebAPIs</p>
+                    </div>
+
+                    <div class="main-second-div2">
+                        <img src="images/jobs/google.png" alt="google" class="main-second-img">
+                        <div>
+                            <p>Google as Junior Software Engineer</p>
+                            <p>2019 Oct - Until now</p>
+                        </div>
+                    </div>
+                    <div class="main-second-div2">
+                        <img src="images/jobs/samsung.png" alt="google" class="main-second-img">
+                        <div>
+                            <p>Samsung as Junior Software Engineer</p>
+                            <p>2010 Oct - 2019 Oct</p>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="main-second-li">
+                    <div class="main-second-div">
+                        <span class="main-second-span"><i class="fa-solid fa-mobile"></i></span>
+                        <p class="main-second-p2">Mobile</p>
+                        <p class="main-second-p2">Android Studio, React Native, iOS, Swift,</p>
+                        <p class="main-second-p2">Java, Kotlin</p>
+                    </div>
+
+                </li>
+                <li class="main-second-li">
+                    <div class="main-second-div">
+                        <span class="main-second-span"><i class="fa-solid fa-server"></i></span>
+                        <p class="main-second-p2">Back-end</p>
+                        <p class="main-second-p2">Java, JavaScript, Go, Kotlin, Spring,</p>
+                        <p class="main-second-p2">Spring Boot</p>
+                    </div>
+                </li>
+            </ul>
+
+
+
+        </section>
+
+        <!-- 메인 세번째 -->
+        <section id="skill" class="main-third">
+            <h1>My Skills</h1>
+            <h2>Skills & Attributes</h2>
+            <p class="main-third-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, <br>
+                laborum magni, voluptates asperiores, nisi saepe nesciunt eveniet
+                laboriosam delectus veritatis quos illum amet et. Natus <br>
+                neque hic ab aliquam commodi.</p>
+
+            <div class="main-third-div">
+                <article class="main-third-article">
+                    <p class="main-third-article-p">Coding Skills</p>
+                    <ul class="main-third-ul">
+                        <li class="main-third-li">
+                            <div class="main-third-div2">
+                                <span>Html</span>
+                                <span>98%</span>
+                            </div>
+                            <div class="bar-bg">
+                                <p class="bar" style="width: 98%;"></p>
+                            </div>
+                        </li>
+                        <li class="main-third-li">
+                            <div class="main-third-div2">
+                                <span>Html</span>
+                                <span>98%</span>
+                            </div>
+                            <div class="bar-bg">
+                                <p class="bar" style="width: 98%;"></p>
+                            </div>
+                        </li>
+                        <li class="main-third-li">
+                            <div class="main-third-div2">
+                                <span>Html</span>
+                                <span>98%</span>
+                            </div>
+                            <div class="bar-bg">
+                                <p class="bar" style="width: 98%;"></p>
+                            </div>
+                        </li>
+                        <li class="main-third-li">
+                            <div class="main-third-div2">
+                                <span>Html</span>
+                                <span>98%</span>
+                            </div>
+                            <div class="bar-bg">
+                                <p class="bar" style="width: 98%;"></p>
+                            </div>
+                        </li>
+                        <li class="main-third-li">
+                            <div class="main-third-div2">
+                                <span>Html</span>
+                                <span>98%</span>
+                            </div>
+                            <div class="bar-bg">
+                                <p class="bar" style="width: 98%;"></p>
+                            </div>
+                        </li>
+                        <li class="main-third-li">
+                            <div class="main-third-div2">
+                                <span>Html</span>
+                                <span>98%</span>
+                            </div>
+                            <div class="bar-bg">
+                                <p class="bar" style="width: 98%;"></p>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+                <article class="main-third-article2">
+                    <h1>Tools</h1>
+                    <ul>
+                        <li>Visual Studio Code</li>
+                        <li>IntelliJ</li>
+                        <li>Android Studio</li>
+                        <li>Eclipse</li>
+                        <li>MySQL Workbench</li>
+                    </ul>
+
+                </article>
+                <article class="main-third-article3">
+                    <h1>Etc</h1>
+                    <ul>
+                        <li>Git</li>
+                        <li>Scrum Master</li>
+                        <li>SVN</li>
+                    </ul>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- 메인 네번째 -->
+        <section id="myWork" class="main-fourth">
+            <h1 class="main-second-h1">My work</h1>
+            <p>Projects</p>
+            <ul class="main-fourth-ul">
+                <li class="main-fourth-li">All<span class="category-count">8</span></li>
+                <li class="main-fourth-li">Front<span class="category-count">4</span></li>
+                <li class="main-fourth-li">Back-end<span class="category-count">2</span></li>
+                <li class="main-fourth-li">Mobile<span class="category-count">1</span></li>
+            </ul>
+            <ul class="main-fourth-ul1">
+                <li class="main-fourth-li1">
+                    <img src="images/projects/project1.webp" alt="" class="main-fourth-img">
+                    <div class="main-fourth-div">
+                        <p>Project #1</p>
+                        <p>Clone Coding with HTML, CSS</p>
+                    </div>
+                </li>
+                <li class="main-fourth-li1">
+                    <img src="images/projects/project2.webp" alt="" class="main-fourth-img">
+                    <div class="main-fourth-div">
+                        <p>Project #1</p>
+                        <p>Clone Coding with HTML, CSS</p>
+
+                    </div>
+                </li>
+                <li class="main-fourth-li1">
+                    <img src="images/projects/project3.webp" alt="" class="main-fourth-img">
+                    <div class="main-fourth-div">
+                        <p>Project #1</p>
+                        <p>Clone Coding with HTML, CSS</p>
+                    </div>
+                </li>
+                <li class="main-fourth-li1">
+                    <img src="images/projects/project4.webp" alt="" class="main-fourth-img">
+                    <div class="main-fourth-div">
+                        <p>Project #1</p>
+                        <p>Clone Coding with HTML, CSS</p>
+                    </div>
+                </li>
+                <li class="main-fourth-li1">
+                    <img src="images/projects/project5.webp" alt="" class="main-fourth-img">
+                    <div class="main-fourth-div">
+                        <p>Project #1</p>
+                        <p>Clone Coding with HTML, CSS</p>
+                    </div>
+                </li>
+                <li class="main-fourth-li1">
+                    <img src="images/projects/project6.webp" alt="" class="main-fourth-img">
+                    <div class="main-fourth-div">
+                        <p>Project #1</p>
+                        <p>Clone Coding with HTML, CSS</p>
+                    </div>
+                </li>
+                <li class="main-fourth-li1">
+                    <img src="images/projects/project7.webp" alt="" class="main-fourth-img">
+                    <div class="main-fourth-div">
+                        <p>Project #1</p>
+                        <p>Clone Coding with HTML, CSS</p>
+                    </div>
+                </li>
+                <li class="main-fourth-li1">
+                    <img src="images/projects/project8.webp" alt="" class="main-fourth-img">
+                    <div class="main-fourth-div">
+                        <p>Project #1</p>
+                        <p>Clone Coding with HTML, CSS</p>
+                    </div>
+                </li>
+            </ul>
+
+        </section>
+
+        <section id="testimonial" class="main-fifth">
+            <h1>Testimonial</h1>
+            <p>See What they say about me</p>
+            <ul class="main-fifth-ul">
+                <li class="main-fifth-li">
+                    <img src="images/testimonials/people1.webp" alt="" class="main-fifth-img">
+                    <div class="main-fifth-div">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi alias sequi eaque officiis deserunt <br>
+                            delectus laboriosam veniam, optio expedita magni ad repellat officia unde, animi cupiditate ex! Quod, vero at!</p>
+                        <p><span>james kim</span><span>/Google</span></p>
+                    </div>
+                </li>
+                <li class="main-fifth-li">
+                    <img src="images/testimonials/people2.webp" alt="" class="main-fifth-img">
+                    <div class="main-fifth-div">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi alias sequi eaque officiis deserunt <br>
+                            delectus laboriosam veniam, optio expedita magni ad repellat officia unde, animi cupiditate ex! Quod, vero at!</p>
+                        <p><span>james kim</span><span>/Google</span></p>
+                    </div>
+
+                </li>
+                <li class="main-fifth-li">
+                    <img src="images/testimonials/people3.webp" alt="" class="main-fifth-img">
+                    <div class="main-fifth-div">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi alias sequi eaque officiis deserunt <br>
+                            delectus laboriosam veniam, optio expedita magni ad repellat officia unde, animi cupiditate ex! Quod, vero at!</p>
+                        <p><span class="main-fifth-span">james kim</span><span>/Google</span></p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="testimonial" class="main-sixth">
+
+
+        </section>
+
+        <footer class="footer">
+            <div class="footer-div">
+                <h2>Let's Talk</h2>
+                <p>com.developer.judy@gmail.com</p>
+                <div class="footer-p">
+                    <span class="footer-span"><i class="fa-brands fa-github"></i></span>
+                    <span class="footer-span"><i class="fa-brands fa-linkedin"></i></span>
+                </div>
+                <p>unior Software Engineer Judy's Portfolio - All right reserved</p>
+
+            </div>
 
         </footer>
+
+
+
+
+
+
+
     </div>
 </body>
+
 </html>
