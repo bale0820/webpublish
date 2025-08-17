@@ -54,8 +54,8 @@ section.container {
     margin: 1rem 0;
 }
 .description {
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
+    font-size: 1.5rem; 
+     margin: 0.5rem 0;
 }
 
 
@@ -283,16 +283,19 @@ section.container {
     display: grid;
     grid-template-columns: repeat(4, 1fr) ;
     grid-template-rows: repeat(2, 1fr) ;
+
+    /* grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-rows: repeat(auto-fit,minmax(130px,1fr)); */
     gap: 1rem;
 }
-.project {
+ .project {
     position: relative;
     overflow: hidden;
-}
+} 
 .project-img {
     width: 100%;
     border-radius: 8px;
-}
+} 
 .project-metadata {
     position: absolute;
     top: 0;
@@ -325,6 +328,7 @@ section.container {
 .testimonial:nth-child(even) .testimonial-img {
     order: 1;
 }
+
 .testimonial-img {
     width: 150px;
     height: 150px;
@@ -359,6 +363,9 @@ section.container {
     text-align: center;
     box-shadow: 5px 5px 0px 0px var(--color-accent);
 }
+
+
+
 
 /*
     Footer
