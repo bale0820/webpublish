@@ -9,6 +9,10 @@
  * ...
  * }
  */
+
+
+
+
 let apple = null;
 apple = {
     // 'name': 'apple',
@@ -34,3 +38,12 @@ console.log(orange.color);
 console.log(orange.emoji);
 
 //Array
+let numbers = [1,2,3,4,5];
+console.log(numbers[0]);
+console.log(numbers[3]);
+console.log(numbers);
+
+
+let fruits = [apple, orange];
+console.log(fruits);
+console.log(fruits[0].emoji);
