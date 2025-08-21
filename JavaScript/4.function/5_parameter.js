@@ -19,7 +19,7 @@ function add(... numbers) {
     // }
 
     //  let sum = numbers.reduce((acc, cur) => { return acc + cur});
-    let sum = numbers.reduce((acc, cur) =>  acc + cur ); // 한줄이면 return과 블레이즈 생략 가능
+    let sum = numbers.reduce((acc, cur) =>   acc + cur ); // 한줄이면 return과 블레이즈 생략 가능
     // {}가 쓰이면 return을 꼭 써야한다
     return sum;
 }
