@@ -449,7 +449,7 @@ footer {
     padding-left: 20px;
 }
 .login-form-input /* icon, input */ {
-    border: 2px solid gray;
+    border: 2px solid silver;
     width: 270px;
     padding: 7px;
     display: flex;
@@ -679,12 +679,12 @@ footer {
     font-size: 12px;
     font-weight: 600;
 }
-.support-content > nav ul li:first-child a{
+/* .support-content > nav ul li:first-child a{
     background-color: var(--color-button);
     border-left: 1px solid var(--color-button);
     border-bottom: 2px solid var(--color-button);
     /* height: 40px; */
-}
+} */
 .support-content > nav + p {
     margin: 40px 0 20px; 
 }
@@ -748,3 +748,25 @@ footer {
     font-weight: 700;
     letter-spacing: 5px;
 }
+
+
+  .swiper {
+        /* border: 1px solid gray; */
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         overflow: hidden; 
+    }
+
+    .swiper-img {
+        width: 100%;
+        height: 100rem;
+        object-fit: contain;
+        margin-bottom : 2rem;
+    }
