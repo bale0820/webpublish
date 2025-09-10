@@ -8,21 +8,23 @@ import { useState } from "react";
 
 export default function App() {
     const [total, setTotal] = useState(0);
+    const [init, setInit] = useState(0); //자식 초기화 : 0, 1 값을 토글(Toggle)
     const click = (type) => { //자식 컴포넌트의 클릭이벤트 결과 가져오기
         if(type === "+") {
                 setTotal(total+1);
         }else if(type === "-")  {
                 setTotal(total-1);
-        }else {
+        }else if(type === 0){
             setTotal(type);
+            setInit(!init);
         }
     }
-    console.log(`total---> ${total}`);
+
     return(
         <>
-        <h1>Counter Test</h1>
-        <Counter click={click} total={total} init= {0}/>
-        <Counter click={click} total={total} init = {0}/>
+        <h1>Counter Test : {total}</h1>
+        <Counter click={click} total={total} init= {init}/>
+        <Counter click={click} total={total} init = {init}/>
         </>
     );
 }
