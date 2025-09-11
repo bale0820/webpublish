@@ -6,7 +6,8 @@ import './index.css';
 // import App from './AppAvatar.js';
 // import App from './AppCounter.js';
 // import App from './AppCounter.js';
-import App from './AppProduct.js';
+// import App from './AppBoxoffice.js';
+import App from './AppMenu.js';
 
 
 

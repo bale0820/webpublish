@@ -1,4 +1,8 @@
 import { useState, useEffect } from "react";
+import { BestProductImage } from "./shared/BestProductImage.jsx";
+import { BestProductContent } from "./shared/BestProductContent.jsx";
+// import { BestProductImage } from "./shared/BestProductImage.jsx";
+import { fetchData } from "./util/commonData.js";
 
 /**
  * 베스트 상품 컴포넌트
@@ -17,12 +21,12 @@ export function BestProduct() {
         // .then((response) => response.json())
         // .then(jsonData => setBestProductList(jsonData))
         // .catch((error) => console.log(error));
-        const fetchData = async() => {
-            const response = await fetch("/data/best_products.json");
-            const jsonData = await response.json();
-            setBestProductList(jsonData);
+        const fetch = async() => {
+            const result = await fetchData("/data/best_products.json");
+            console.log('result==>',result);
+            setBestProductList(result);
         }
-        fetchData();
+        fetch();
     }, []);
     return (
         <>
@@ -36,6 +40,7 @@ export function BestProduct() {
                             rank={product.rank}
                             like={product.like}
                             cartCount={handleCartCount}
+                            icon="🛒"
                         /></li>
                         : <li key={index}><BestProductItem item={product}
                             cartCount={handleCartCount}
@@ -62,6 +67,8 @@ export function BestProductItem({ item, cartCount }) {
                 style={{ width: "200px", height: "220px" }}
                 rank={item.rank}
                 like={item.like}
+                icon={item.icon}
+                icon_style={item.icon_style}
                 cartCount={cartCount}
             />
             <BestProductContent
@@ -69,57 +76,17 @@ export function BestProductItem({ item, cartCount }) {
                 sale={item.sale}
                 price={item.price}
                 like={item.like}
-
+                icon={item.icon}
             />
         </div>
     );
 }
 
-/** 
- * 베스트 상품 컨텐츠 컴포넌트 
-*/
-export function BestProductContent({ title, sale, price, like }) {
-    return (
-        <div className="best-product-content">
-            <p className="best-product-content-title">{title}</p>
-            <span className="best-product-content-sale">{sale}</span>
-            <span className="best-product-content-price">{price}</span>
-            {/* <span className="best-product-content-like">{like}</span> */}
-            {like ?
-                <span className="best-product-img-like">🤍</span> : ""}
-
-        </div>
-    );
-}
 
 
 
-/**
- * 베스트 상품 이미지 컴포넌트
- */
-export function BestProductImage({ img, style, rank, like, cartCount }) {
-    const handleAddCart = () => {
-        cartCount();
-    }
-    return (
-        <div className="best-product-img">
-            <ProductImage img={img} style={style} />
-            <span className="best-product-img-no">{rank}</span>
-            {like ?
-                <span className="best-product-img-like" onClick={handleAddCart}>🛒</span> : ""}
-        </div>
-    );
-}
 
 
 
-/**
- * 상품 이미지 컴포넌트
- */
 
-export function ProductImage({ img, style }) {
-    const { width, height } = style;
-    return (
-        <img src={img} style={{ width: width, height: height }} />
-    );
-}
+

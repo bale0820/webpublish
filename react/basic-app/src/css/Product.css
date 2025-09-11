@@ -51,15 +51,19 @@
 .best-product-img-no {
     position: absolute;
     top: 0;left: 0;
-    background-color: #000;
-    color: #fff;
+    /* background-color: #000;
+    color: #fff; */
     /* font-weight: bold; */
-    padding: 8px 12px;
+    /* padding: 8px 12px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .best-product-img {
     /* border: 1px solid blue;
-    width: 200px;
-    height: 300px; */
+    height: 300px;
+    width: 200px; */
+   
     position: relative;
 }
 
