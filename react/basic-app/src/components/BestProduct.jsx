@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { BestProductImage } from "./shared/BestProductImage.jsx";
 import { BestProductContent } from "./shared/BestProductContent.jsx";
 // import { BestProductImage } from "./shared/BestProductImage.jsx";
-import { fetchData } from "./util/commonData.js";
+import { fetchData } from "../util/commonData.js";
 
 /**
  * 베스트 상품 컴포넌트
