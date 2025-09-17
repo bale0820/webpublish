@@ -1,9 +1,8 @@
 .avatar-list {
-  display:  flex;
-  justify-content : space-between;
-  gap : 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
-
 .avatar {
     width: 200px;
     height: 240px;

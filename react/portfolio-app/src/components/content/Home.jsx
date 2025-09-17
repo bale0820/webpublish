@@ -1,10 +1,13 @@
-import { AvatarImage } from "../base/Avatar";
+import { AvatarImage } from "../base/Avatar.jsx";
 
 export function Home({data}) {
     const {img, name, title, description} = data;
-    return(
+    
+    return (
         <section id="home">
-            <AvatarImage style="home-avatar" img={img} msg="home photo" />
+            <AvatarImage    img={img} 
+                            msg="home photo"
+                            style="home-avatar"  />
             <h2 className="home-title">
                 Hello <br /> 
                 I'm <strong className="home-title strong">{title}</strong>, {name}

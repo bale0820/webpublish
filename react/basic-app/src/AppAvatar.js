@@ -1,23 +1,22 @@
 import './css/Avatar.css';
-import { Avatar, AvatarList, AvatarImage, AvatarImageList } from './components/Avatar.jsx';
-// import { AvatarList } from './components/AvatarList.jsx';
+import { Avatar, AvatarList, AvatarImage, AvatarImageList } 
+    from './components/Avatar.jsx';
 
 export default function App() {  
   const list = [
-    {"img": "/images/people1.webp", "style" : "avatar-img"},
+    {"img": "/images/people1.webp", "style": "avatar-img"},
     {"img": "/images/people2.webp", "style": "avatar-img-circle"},
     {"img": "/images/people3.webp", "style": "avatar-img"}
   ];
   const alist = [
     {"img": "/images/people1.webp", "name": "James"},
-    {"img": "/images/people2.webp", "name": "smith"},
+    {"img": "/images/people2.webp", "name": "Smith"},
     {"img": "/images/people3.webp", "name": "Ann"}
   ];
 
   return (
     <>  
       <Avatar img="/images/people3.webp" name="Ann" />  
-      <Avatar img="/images/people2.webp" name="John" />  
       <hr/>
       <AvatarList list={alist} className="avatar-list" />
       <hr/>

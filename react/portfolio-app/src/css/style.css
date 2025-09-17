@@ -54,8 +54,8 @@ section.container {
     margin: 1rem 0;
 }
 .description {
-    font-size: 1.5rem; 
-     margin: 0.5rem 0;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
 }
 
 
@@ -99,7 +99,7 @@ section.container {
     border: 1px solid var(--color-accent);
     border-radius: 4px;
 }
-/* media query - header toggler*/
+/* media query - header toggler */
 .header-toggle {
     display: none;
     color: var(--color-white);
@@ -109,7 +109,6 @@ section.container {
     right: 1rem;
     top: 1.3rem;
 }
-
 
 /*
     Home
@@ -283,19 +282,16 @@ section.container {
     display: grid;
     grid-template-columns: repeat(4, 1fr) ;
     grid-template-rows: repeat(2, 1fr) ;
-
-    /* grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    grid-template-rows: repeat(auto-fit,minmax(130px,1fr)); */
     gap: 1rem;
 }
- .project {
+.project {
     position: relative;
     overflow: hidden;
-} 
+}
 .project-img {
     width: 100%;
     border-radius: 8px;
-} 
+}
 .project-metadata {
     position: absolute;
     top: 0;
@@ -309,7 +305,7 @@ section.container {
     background-color: var(--color-black);
     opacity: 0;
 }
- .project-metadata:hover {
+.project-metadata:hover {
     opacity: 0.8;
 }
 
@@ -328,7 +324,6 @@ section.container {
 .testimonial:nth-child(even) .testimonial-img {
     order: 1;
 }
-
 .testimonial-img {
     width: 150px;
     height: 150px;
@@ -364,9 +359,6 @@ section.container {
     box-shadow: 5px 5px 0px 0px var(--color-accent);
 }
 
-
-
-
 /*
     Footer
 */
@@ -378,7 +370,7 @@ section.container {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 1rem;
 }
 .contact-link {
@@ -388,15 +380,10 @@ section.container {
     color: var(--color-accent);
 }
 
-
-
-
-
-/**********************************************
-    media screen - 601px ✖ 1000px
-**********************************************/
-
-@media screen and (max-width : 1000px) {
+/****************************************
+    media screen - 601px ❌ 1000px
+****************************************/
+@media screen and (max-width: 1000px) {
     .header {
         flex-direction: column;
         align-items: start;
@@ -408,17 +395,14 @@ section.container {
         display: block;
     }
     section {
-        padding: 3rem 2rem;
+        padding: 3rem 2rem;        
     }
-
     .title {
         font-size: 2rem;
     }
-
-    .description {
+    .description{
         font-size: 1rem;
-    } 
-
+    }
     #home {
         padding: 5rem 3rem;
     }
@@ -426,7 +410,9 @@ section.container {
         font-size: 2.5rem;
         margin-bottom: 0.5rem;
     }
-
+    #about {
+        border: 1px solid red;
+    }
     .majors {
         flex-direction: column;
         align-items: center;
@@ -446,36 +432,34 @@ section.container {
     .category {
         width: 80%;
     }
-    
     .projects {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .testimonial {
         flex-direction: column;
     }
     .testimonial:nth-child(even) .testimonial-img {
-        order:0;
+        order: 0;
     }
-
     .arrow-up {
-        bottom: 1.5rem;
-        right: 1,5rem;
+        bottom: 1rem;
+        right: 1.5rem;
         font-size: 2rem;
-        height: 3rem;
-        width: 3rem;
+        width: 3rem; 
+        height: 3rem; 
     }
-    
+
 }
-/* 
-**max-width: 1000px**은 CSS 픽셀(논리적 픽셀)을 기준으로 작동합니다. 이 값은 브라우저의 뷰포트 크기를 기준으로 하며, 실제 화면의 물리적 해상도와는 다를 수 있습니다.
 
-브라우저의 확대/축소나 고해상도 디스플레이에서는 물리적인 픽셀의 크기가 다를 수 있지만, CSS 픽셀은 상대적인 크기 기준으로 사용됩니다. */
-/**********************************************
-    medua screen - 1px ✖ 600px
-**********************************************/
-
+/****************************************
+    media screen - 1px ❌ 600px
+****************************************/
 @media screen and (max-width: 600px) {
     .projects {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
+
+
+
+

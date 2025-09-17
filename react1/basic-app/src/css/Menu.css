@@ -1,0 +1,25 @@
+.menu-list-item-border {
+    position: absolute;
+    right: 0;
+    top : 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 10px;
+    background-color: aqua;
+}
+.menu-list-item {
+    position: relative;
+}
+.menu-list {
+    display: flex;
+    list-style-type: none;
+}
+
+
+.menu-item {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+
+}

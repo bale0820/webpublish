@@ -1,8 +1,3 @@
-// //최초로 호출되는 함수 : window.onload(), window.addEventListener()..
-// window.addEventListener('DOMContentLoaded', function() {
-//     showResult('20250101');
-// })
-
 /**
  * KMDB 영화 포스터 검색
  */
@@ -12,7 +7,6 @@ export async function searchMoviePoster(movieNm, openDt) {
     url += `search_json2.jsp?collection=kmdb_new2&detail=Y`;
     url += `&title=${movieNm}&releaseDts=${openDt}`;
     url += `&ServiceKey=${key}`;
-
 
     const result = await fetch(url);
     const jsonData = await result.json();
@@ -24,17 +18,14 @@ export async function searchMoviePoster(movieNm, openDt) {
  * KOBIS 영화 일별 박스 오피스
  */
 export async function fetchKobisAPI(sdate) {
-    //kobis api 연동
-    // let key = "1387ed83604df30a0c5d9dfdea0cba00";
-    let key = "6ab7a4f4249876a8316a3b913d8fefa0";
-    // let sdate = "20250903";
+    let key = "6206e4e96646c240ac59f09bc0164ff9";
     let url = `http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/`
     url += `searchDailyBoxOfficeList.json?key=${key}&targetDt=${sdate}`;
+    
     let response = await fetch(url);
+    
     return response.json();    
 }
-
-
 
 /**
  * 데이터 처리 공통 모듈
