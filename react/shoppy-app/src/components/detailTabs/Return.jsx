@@ -21,21 +21,23 @@ export function Return() {
             <p style={{ paddingBottom: "20px" }}>{returnData && returnData.description}</p>
             <table>
                 <tbody>
-                   
-                        {returnData.list && returnData.list.map((item) =>
+
+                    {returnData.list && returnData.list.map((item) =>
                         <tr>
                             <td>
-                                    <td style={{ width: "30%", textAlign: "center" }}>{item.title}</td>
+                                <td style={{ width: "30%", textAlign: "center" }}>{item.title}</td>
                             </td>
-                                    <td>
-                                        {item.infoList && item.infoList.map((i) =>
+                            <td>
+                                <ul>
+                                    {item.infoList && item.infoList.map((i) =>
                                         <li>{i}</li>
-                                        )}
-                                    </td>
+                                    )}
+                                </ul>
+                            </td>
                         </tr>
-                           
-                        )}
-                 
+
+                    )}
+
                 </tbody>
 
             </table>
