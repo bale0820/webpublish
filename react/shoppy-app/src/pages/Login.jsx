@@ -1,8 +1,10 @@
+import {useNavigate} from 'react-router-dom';
 import { useRef, useState } from "react";
 import { FaIdBadge } from "react-icons/fa";
 import { validateLoginCheck } from "../utils/validate.js";
 
 export function Login() {
+    const navigate = useNavigate();
     const idRef = useRef(null);
     const pwdRef = useRef(null);
     const initForm = { "id": "", "pwd": "" };
@@ -40,7 +42,23 @@ export function Login() {
             errors : errors 
         }
         if (validateLoginCheck(param)) {
-            console.log('서버전송 --> ', formData);
+            // console.log('서버전송 --> ', formData);
+            const did = "test";
+            const dpwd = "1234";
+            if(did === formData.id && dpwd === formData.pwd) {
+                    alert("로그인에 성공하셨습니다.");
+                    const loginInfo = {
+                        "userId" : formData.id,
+                        "token" : "dkfj123131231"
+                    } 
+                    localStorage.setItem("loginInfo", JSON.stringify(loginInfo));
+                    navigate("/");
+                    
+                  
+            }else {
+                alert("로그인에 실패, 확인후 다시 진행해주세요");
+                idRef.current.focus();
+            }
 
         }
 

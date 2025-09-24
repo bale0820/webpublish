@@ -1,4 +1,4 @@
-import { Menu } from "../commons/Menu.jsx";
+import { Menu } from "./Menu.jsx";
 
 export function MenuList({menus}) {
 

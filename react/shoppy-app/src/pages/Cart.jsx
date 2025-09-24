@@ -3,8 +3,10 @@ import { RiDeleteBin6Line } from 'react-icons/ri';
 import { axiosData } from '../utils/dataFetch.js';
 import { cartItemsAddInfo, getTotalPrice } from '../utils/cart.js';
 import '../styles/cart.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 export function Cart({ items, updateCart }) {
+    const navigate = useNavigate();
     const [cartList, setCartList] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);   
     
@@ -84,6 +86,7 @@ export function Cart({ items, updateCart }) {
             )}
 
             {/* 주문 버튼 출력 */}
+            {cartList && cartList.length !== 0 ?
             <>
                 <div className='cart-summary'>
                     <h3>주문 예상 금액</h3>
@@ -107,10 +110,20 @@ export function Cart({ items, updateCart }) {
                     </p>
                 </div>
                 <div className='cart-actions'>
-                    <button type='button'>주문하기</button>
+                    <button type='button' onClick={() => {
+                        // {state : cartList, totalPrice : totalPrice}
+                        navigate('/checkout', {state : {cartList : cartList, totalPrice : totalPrice}});
+                    }}>주문하기</button>
                 </div>
             </>
+            : <div>
+                <p>장바구니에 담은 상품이 없습니다. &nbsp;&nbsp;&nbsp;
+                    <Link to="/all">상품보러가기</Link>
+                </p>
+                <img src="/images/cart.jpg" style={{width: "50%", marginTop: "20px"}}/>
+              </div>
 
+        }
         </div>
     );
 }
