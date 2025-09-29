@@ -1,22 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { axiosData } from '../utils/dataFetch.js';
 import { cartItemsAddInfo, getTotalPrice } from '../utils/cart.js';
 import '../styles/cart.css';
+import { ProductContext } from '../context/ProductContext.jsx';
+import { useProduct } from '../hooks/useProduct.js';
 
 export function Cart({ items, updateCart }) {
     const navigate = useNavigate();
-    const [cartList, setCartList] = useState([]);
-    const [totalPrice, setTotalPrice] = useState(0);   
+    const {cartList, totalPrice, setTotalPrice, setCartList} = useContext(ProductContext);
+    const {cartProduct} = useProduct();
+    // const [cartList, setCartList] = useState([]);
+    // const [totalPrice, setTotalPrice] = useState(0);   
     
     useEffect(()=> {
-        const fetch = async() => {
-            const jsonData = await axiosData("/data/products.json");
-            setCartList(cartItemsAddInfo(jsonData, items));
-            setTotalPrice(getTotalPrice(jsonData, items));
-        }
-        fetch();
+        // const fetch = async() => {
+        //     const jsonData = await axiosData("/data/products.json");
+        //     setCartList(cartItemsAddInfo(jsonData, items));
+        //     setTotalPrice(getTotalPrice(jsonData, items));
+        // }
+        // fetch();
+        cartProduct(items);
+
     }, []);    
 
     //수량 업데이트 함수
