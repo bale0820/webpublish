@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import "../styles/cart.css";
 import "../styles/checkoutinfo.css";
-import { useLocation } from "react-router-dom";
 
 export function CheckoutInfo() {   
- const {state} = useLocation();
- const [orderList, setOrderList] = useState(state.cartList);
- console.log("state==>> ", state);
+    const { state } = useLocation();
+    const [orderList, setOrderList] = useState(state.cartList);
+    console.log('state==>> ', state);
+    
+
 return (
     <div className="cart-container">
     <h2 className="cart-header"> 주문/결제</h2>

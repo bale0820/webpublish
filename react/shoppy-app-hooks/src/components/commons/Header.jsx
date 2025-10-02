@@ -8,8 +8,8 @@ import { useAuth } from '../../hooks/useAuth.js';
 
 export function Header() {
     const { handleLogout } = useAuth();
-    const { cartCount } = useContext(CartContext);
     const { isLogin } = useContext(AuthContext);
+    const { cartCount } = useContext(CartContext);
 
     return (
         <div className="header-outer">
@@ -21,35 +21,26 @@ export function Header() {
                 <nav className='header-right'>
                     <Link to="/all">Products</Link>
                     <Link to="/cart" className="header-icons-cart-link">
-                        <GiShoppingCart className='header-icons' />
+                        <GiShoppingCart className='header-icons'/>
                         <span className='header-icons-cart'>{cartCount}</span>
                     </Link>
-
-                    {!isLogin &&
+                    { !isLogin && 
                         <Link to="/login">
                             <button type="button">Login</button>
-                        </Link>
+                        </Link>                    
                     }
-                    {isLogin &&
-                        <button type="button" onClick={handleLogout}>Logout</button>
+                    { isLogin &&
+                        <button type="button"
+                                onClick={handleLogout}>Logout</button>
                     }
-
-                    {/* {isLogin ?
-                        <button type="button">Logout</button>
-                        :
-                        <Link to="/login">
-                            <button type="button">Login</button>
-                        </Link>
-
-                    } */}
                     <Link to="/signup">
                         <button type="button">Signup</button>
-                    </Link>
-                    {isLogin &&
+                    </Link>    
+                    { isLogin &&
                         <Link to="/support">
                             <button type="button">Support</button>
-                        </Link>
-                    }
+                        </Link>                   
+                    }               
                 </nav>
             </div>
         </div>

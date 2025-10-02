@@ -8,25 +8,23 @@ import { Detail } from '../components/detailTabs/Detail.jsx';
 import { Review } from '../components/detailTabs/Review.jsx';
 import { QnA } from '../components/detailTabs/QnA.jsx';
 import { Return } from '../components/detailTabs/Return.jsx';
-
 import { useCart } from '../hooks/useCart.js';
 import { useProduct } from '../hooks/useProduct.js';
 import { ProductContext } from '../context/ProductContext.js';
 
 export function ProductDetail() {
-    const { pid } = useParams();  // { pid: 1}
+    const {pid} = useParams();  // { pid: 1}
     const { addCart } = useCart();
     const { filterProduct } = useProduct();
-    const {product, imgList} = useContext(ProductContext);
+    const { product, imgList } = useContext(ProductContext);
     const [size, setSize] = useState('XS');
     const tabLabels = ['DETAIL', 'REVIEW', 'Q&A', 'RETURN & DELIVERY'];
     const [tabName, setTabName] = useState('detail');
     const tabEventNames = ['detail', 'review', 'qna', 'return'];
-
-    useEffect(() => {
+    
+    useEffect(()=> {
         filterProduct(pid);
     }, []);
-
 
     //쇼핑백 추가하기 함수
     const handleAddCartItem = () => {
@@ -38,15 +36,15 @@ export function ProductDetail() {
         }
         addCart(cartItem);
     }
-
+    
 
     return (
         <div className="content">
             <div className='product-detail-top'>
                 <div className='product-detail-image-top'>
                     <img src={product.image} />
-                    <ImageList className="product-detail-image-top-list"
-                        imgList={imgList} />
+                    <ImageList  className="product-detail-image-top-list"
+                                imgList={imgList}/>
                 </div>
                 <ul className='product-detail-info-top'>
                     <li className='product-detail-title'>{product.name}</li>
@@ -56,9 +54,9 @@ export function ProductDetail() {
                     </li>
                     <li className='product-detail-subtitle'>{product.info}</li>
                     <li className='product-detail-subtitle-star'>
-                        <StarRating totalRate={product.rate}
-                            style="star-coral"
-                        />
+                        <StarRating  totalRate={product.rate}
+                                     style="star-coral"
+                                />
                         <span>527개 리뷰 &nbsp;&nbsp; {">"} </span>
                     </li>
                     <li>
@@ -69,7 +67,7 @@ export function ProductDetail() {
                         <select
                             className="product-detail-select2"
                             onChange={(e) => setSize(e.target.value)}
-                        >
+                            >
                             <option value="XS">XS</option>
                             <option value="S">S</option>
                             <option value="M">M</option>
@@ -78,12 +76,12 @@ export function ProductDetail() {
                         </select>
                     </li>
                     <li className="flex">
+                        <button type="button" 
+                                className="product-detail-button order">바로 구매</button>
                         <button type="button"
-                            className="product-detail-button order">바로 구매</button>
-                        <button type="button"
-                            className="product-detail-button cart"
-                            onClick={handleAddCartItem}
-                        > 쇼핑백 담기</button>
+                                className="product-detail-button cart"
+                                onClick={handleAddCartItem}
+                                > 쇼핑백 담기</button>
                         <div type="button" className="gift">
                             <PiGiftThin />
                             <div className="gift-span">선물하기</div>
@@ -93,33 +91,33 @@ export function ProductDetail() {
                         <ul className='product-detail-summary-info'>
                             <li>상품 요약 정보</li>
                         </ul>
-                    </li>
+                    </li>               
                 </ul>
             </div>
 
             <div className='product-detail-tab'>
                 <ul className='tabs'>
-                    {tabLabels && tabLabels.map((label, i) =>
-                        <li className={tabName === tabEventNames[i] ? "active" : ""}>
+                    { tabLabels && tabLabels.map((label, i) => 
+                        <li className={tabName === tabEventNames[i]? "active": "" }>
                             <button type="button"
-                                onClick={() => setTabName(tabEventNames[i])}
-                            >{label}</button>
+                                    onClick={()=> setTabName(tabEventNames[i])}
+                                >{label}</button>
                         </li>
                     )}
                 </ul>
 
-                {tabName === "detail"
-                    && <Detail imgList={imgList}
-                        info={product.detailInfo} />}
-                {tabName === "review" && <Review />}
-                {tabName === "qna" && <QnA />}
-                {tabName === "return" && <Return />}
+                {tabName === "detail" 
+                                &&  <Detail imgList={imgList} 
+                                            info={product.detailInfo}       />}
+                {tabName === "review" &&  <Review />}
+                {tabName === "qna" &&  <QnA />}
+                {tabName === "return" &&  <Return />}
 
             </div>
-            <div style={{ marginBottom: "50px" }}></div>
+            <div style={{marginBottom:"50px"}}></div>
         </div>
 
-
+        
     );
 }
 
